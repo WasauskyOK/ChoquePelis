@@ -1,0 +1,370 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+	box-sizing: border-box;
+	overflow-x:hidden;
+	width: 100vw;  
+}
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+  
+    grid-gap: 10px;
+    
+    grid-template-rows:70px auto auto auto;
+    grid-template-areas: "menu menu menu"
+                        "banner banner banner"
+                        "cuerpo cuerpo cuerpo"
+                        "pie pie pie";
+     -webkit-perspective: 1100;
+}
+
+.caja{
+    background-color: #305468;
+    
+}
+.logo{
+	display:flex;
+	
+	
+}
+.logo a{
+	text-decoration: none;
+	
+	display:flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Baloo Da', cursive;
+	font-size:35px;
+	color:white;
+	padding-left: 8px; 
+}
+.logo a span{
+	background: linear-gradient(60deg,#ffa31a,white);
+  -webkit-background-clip: text;
+  color:transparent;
+/*    
+	text-shadow:inset 2px 2px 10px 5px  rgba(245,231,56,0.6);
+background-image:linear-gradient(25deg,orange,pink);	
+	*/
+	
+
+}
+.menu{
+	
+   grid-area: menu;
+   background-color:#305468;
+  
+  
+}
+.cuerpobaner{
+    grid-area:banner ;
+    
+}
+.cuerpo{
+	grid-area:cuerpo;
+      display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,220px));
+   grid-template-rows: repeat(1,386px);
+    
+    grid-gap: 10px;
+    grid-auto-rows: 380px;
+    grid-auto-flow: dense row;
+    justify-content: space-evenly;
+    align-content:space-evenly;
+    height: auto;
+    padding: 20px 0px 30px;
+    /*
+   background-color:rgba(240,231,231,0.76);
+*/
+background-color:#f8f9fa;
+}
+.pie{
+    grid-area: pie;
+    background-color: red;
+}
+
+/*contenido vista pelicula*/
+
+
+.vistapelicula{
+    
+    background-color: white;
+   /*   
+    display: grid;
+    grid-template-columns: 1fr;
+   
+    grid-template-rows:1fr 250px;
+    */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;   
+    border-radius:10px; 
+    position:relative;
+    
+}
+.cuadrado{
+    background-color: darkgoldenrod;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+/*
+.vistapelicula:nth-child(odd):hover{
+    background-color: chocolate;
+}
+.vistapelicula:nth-child(even):hover{
+    background-color: coral;
+}
+*/
+/*CUADROS*/
+.tarjeta_wrap{
+    perspective: 800;
+    -webkit-perspective:800;
+    height: 85%;
+    width: 100%;
+ 	   
+}
+.tarjeta{
+    width: 100%;
+    height: 100%;
+ 
+    position: relative;
+    transform-style: preserve-3d;
+   transition: .7s ease-in; 
+	
+}
+.adelante,.atras{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+	z-index:-100;
+}
+.adelante{
+    
+}
+.imagen_adelante{
+     min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+.atras{
+  
+    transform: rotateY(180deg);
+}
+.tarjeta_wrap:hover .tarjeta{
+    transform: rotateY(180deg);
+}
+
+.titulopel{
+    
+    height: 15%;
+    display: flex;
+    text-align: center;
+    background-color: #1a73e8;
+    justify-content: center;
+    align-content:center;
+    font-family: 'Fredoka One', cursive;
+	color :white;
+}
+.titulopel:hover{
+    background-color: white;
+    color:#1a73e8;
+}
+.titulopel p{
+    margin-top: 6px;
+	margin:auto;
+}
+
+.atras{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    
+}
+.botones{
+  
+    
+}
+
+
+/*BOTONES ATRAS*/
+
+
+ .boton_quitar{
+  
+   background-color:#FF2233 ;
+  border: none;
+  color:#FFF2FA;
+   
+  padding: 20px;
+  text-align: center;
+  
+  font-size: 26px; 
+  cursor: pointer;
+  font-family: 'Baloo Da', cursive;
+  border-radius:12px;
+   margin-bottom: 15px;
+ transition:all 0.9s;
+  position:relative;
+  overflow: hidden;
+  animation:scalaboton 1.1s infinite alternate ease-in;
+  
+  }
+  .boton_quitar:hover{
+	filter: brightness(128%);
+	transition:all 0.9s;
+	background-color:#FFF2FA;
+  	color:#FF2233;
+  
+	}
+  
+    @keyframes scalaboton{
+ 		to{
+ 			transform:scale(1);
+ 			filter:blur(0.2px);
+ 		}
+ 		from{
+ 			transform:scale(1.05);
+ 			filter: brightness(110%);
+ 		}
+}
+
+ .boton_agregar{
+   background-color:#1a73e8 ;
+  border: none;
+  color:white;
+   
+  padding: 20px;
+  text-align: center;
+  
+  font-size: 26px; 
+  cursor: pointer;
+  font-family: 'Baloo Da', cursive;
+  border-radius:12px;
+   margin-bottom: 7px;
+ transition:all 0.9s;
+  position:relative;
+  overflow: hidden;
+  	animation:scalaboton 1.1s infinite alternate ease-in;
+  }
+    .boton_agregar:hover{
+  	background-color:white;
+  	color:#1a73e8;
+  	transition:all 0.9s;
+  	 
+  }
+  .boton_agregar::before{
+  	content:"";
+  	position:absolute;
+  	height: 7px;
+  	width: 0%;
+  	bottom:0;
+  	left:0;
+  	background-color:#1a73e8;
+  	 box-shadow: 0px -119px #1a73e8; 
+  }
+  
+  
+  .linkDirecto{
+  display:inline-block;
+  padding:10px 50px;
+  color:white;
+  text-decoration:none;
+  background-color:#1a73e8;
+  position:absolute;
+  bottom: 5px;
+  right: 5px;
+  border-bottom-left-radius:12px;
+  border-bottom-rigth-radius:12px; 
+  font-weight: bold;
+  font-size:17px;
+  font-family: 'Baloo Da', cursive;
+  transition: all 0.5s;
+  }
+  .linkDirecto:hover{
+  		cursor:pointer;
+  	color:#1a73e8;
+  	background-color:white;
+  	transition: all 0.5s;
+  }
+  .descripcion{
+ background-color: rgba(0,0,0,.15);
+ font-family: 'Quicksand', sans-serif; 
+  display:flex;
+  flex-direction: column;
+  position:relative;
+  
+  align-items:flex-start;
+	
+  text-align: justify;
+  word-wrap: break-word;
+  padding:3px;
+  font-size:15px;
+  
+  
+  }
+
+  .iconLinkGoFast{
+  right: 10px;
+  bottom: 15px;
+  margin-right:10px;
+  font-size:20px;
+  color:#1a73e8;
+  position:absolute;
+  }
+  
+
+
+
+
+ .recuadroIconoAdd{
+               width: 40px;
+               height: 40px;
+               background-color: white;
+               border-radius: 4px 50% 50%;             
+               position: absolute;
+               display: flex;
+                 box-shadow: 0px 1px 4px 1px rgba(100,149,237 ,1 ,0.76); 
+               right: 15px;
+	top:25px;
+               
+           }
+           .recuadroIconoAdd::before{
+            content: "";
+            position: absolute;
+               
+           }
+           .iconoVisto{
+               color: cornflowerblue;
+               font-size: 18;
+               font-weight: 900;
+                margin: auto;
+           }
+           .recuadroIconoQuit{
+                 width: 40px;
+               height: 40px;
+               background-color: white;
+               border-radius: 4px 50% 50%;             
+               position: absolute;
+               display: flex;
+               box-shadow: 0px 1px 4px 1px rgba(100,149,237 ,1 ,0.76); 
+               right: 15px;
+	top:25px;
+               
+           }
+           .iconoFalta{
+               color: cornflowerblue;
+               font-size: 18;
+               font-weight: 900;
+                margin: auto;
+           }
+  /*BLOQUE FILTRO POR CATEGORIA*/
+  
+  

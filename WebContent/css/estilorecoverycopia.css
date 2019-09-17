@@ -1,0 +1,860 @@
+        body{
+                 overflow: auto;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                
+                
+                background-position: center;
+                background-attachment: inherit;
+                background-repeat: no-repeat;
+                position: relative;
+                 display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+            }
+
+            .recoveryUsuario{
+                width:100%;
+                display:flex;
+                background-color:rgba(0,0,0,.1);
+            }
+                .contenedorRecuperar{
+       		position:relative;
+       		width:400px;
+       		
+       		height:calc(100vh - 200px);
+			margin:auto;
+       		background-color: red;
+       }
+            /*
+                body::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                
+                top: 0;
+                left: 0;
+                background-image: 
+                opacity: 0.9;
+                filter: blur(2px);
+                    
+            }
+            */
+            .contenedorGlobal{
+                
+                width: 100vw;
+                height: 100vh;
+                ////background-color: pink;
+                
+                display: grid;
+                grid-auto-columns:1fr;
+                grid-auto-rows: 4fr 1fr;
+                
+            }
+            .contenedorCentral{
+            
+                ///background-color:;
+                display: flex;
+                position: relative;
+            }
+            .contenedorLogCentral{
+                width: 400px;
+                height: calc(100% - 30px);
+                background-color: ;
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+                
+            }
+            .contenedorCajas{
+                width: 300%;
+                height: 100%;
+                display: flex;
+                
+               
+            }
+            .contenedorLog{
+                background-color: white;
+               display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+             border-radius: 10px;       
+            position: relative;
+            
+            } 
+            .contenedorLog:before{
+                width: 100%;
+                height: 8px;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #1a73e8;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                
+            }
+            .contenedorLog2{
+                width: 95%;
+                height: calc(100% - 150px);
+                /*background-color: red;
+                */
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows:2fr 1fr 1fr 1fr 2fr;
+                grid-gap: 5px;
+                border: 2px solid rgba(0,0,0,0.1);
+                background-color: white;
+            }
+            .formularioSession{
+                grid-row: 2 / 5;
+                grid-column:1fr;
+                display:grid;
+                grid-template-columns:1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-gap:10px;
+
+                 
+            }
+            .LogTitle{
+                display:grid;
+                
+            }
+            .logRecuperar{
+                grid-column:1 / -1;
+                grid-row:5 / 6;
+                display:grid;
+                justify-items:center;
+                align-items:center;
+
+            }
+            .contenedorLog3{
+                width: 95%;
+                height: calc(100% - (100% - 95px));
+                background-color: white;
+                border: 2px solid rgba(0,0,0,0.1);
+            }
+            /*
+            <div class="LogTitle">
+    <a href="#">Choque<span>Pelis</span></a>
+    </div>                        
+    <div class="registerusuario"></div>
+    <div class="registercontra"></div>
+    <div class="registernombre"></div>                   <div class="registerapellido"></div>     
+    <div class="registercod"></div> 
+    <div class="registerrespuesta"></div>                 <div class="registerfecha"></div>                   <div class="registerregistrar"></div>   
+            */
+            .contenedorRegister{
+                background-color: white;
+                display: grid;
+                grid-template-columns:1fr;
+                grid-template-rows:2fr repeat(9,1fr);;
+                grid-gap: 5px;
+                
+                
+            } 
+            .contenedorRegister div{
+                display: flex;
+            }
+            .contenedorRegister input{
+                width: 80%;
+                height: 90%;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                padding-left: 15px;
+                margin: auto;
+                
+                  
+                
+                border: 0.56px solid rgba(0,0,0,0.1);
+            }
+            #regusuario,#regpassword,#regnombre,#regapellido,#regrespuesta,#regfecha{
+                background-color: #f8f9fa;
+            }
+            .contenedorRegister select{
+                margin: auto;
+                height: 90%;
+                width: 80%;
+                background-color: #f8f9fa;
+                padding-left: 15px;
+                border-radius: 5px;
+            }
+          
+            .contenedorRegister input::placeholder{
+                opacity: 1;
+                transition: all 0.5s ease;
+                color: darkslategray;
+            }
+            .contenedorRegister input:focus::placeholder{
+                opacity: 0;
+                transition:all  0.5s  ease;
+            }
+            .registraruser{
+                cursor:pointer;
+                font-size: 16px;
+                color: white;
+                background-color: #1a73e8;
+            }
+            .YatengoCuenta{
+                background-color: ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .YatengoCuenta p{
+                text-align: center;
+                font-weight: 500;
+            }
+            .YatengoCuenta span{
+                cursor: pointer;
+                color: #1a73e8;
+            }
+           
+            .contenedorRecovery{
+                 background-color: white;
+                display:grid;
+                grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+                grid-template-columns: 1fr;
+                grid-gap:10px;
+                position: relative;
+                
+            }
+            .contenedorRecovery::before{
+                content: "";
+                width: 100%;
+                height: 5px;
+                background: linear-gradient(dodgerblue,#1a73e8);
+                position: absolute;
+                left: 0;
+                top: 0;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                filter: blur(0.85px);
+            }
+           
+            .contenedorRecovery #recovuser{
+                height: 50%;
+                width: 60%;
+                background-color: ;                   border: none;
+                outline: none;
+                border-radius: 20px;
+                padding-left: 15px;
+                background-color: rgba(0,0,0,0.1);
+           
+            }
+            #recovuser::placeholder{
+                color:dimgray;
+                opacity: 1;
+                transition: all 0.5s ease;   
+            }
+            #recovuser:focus::placeholder{
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+            
+            .contenedorRecovery .pregs{
+                border: none;
+                outline: none;
+                padding: 5px;
+                height: 58%;
+                width: 35%;
+                margin-left: 5px;
+                text-align: center;
+                border-radius: 20px;
+                color: white;
+                background-color: #1a73e8;
+                cursor: pointer;
+            }
+            
+            .recoveryusuario{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                
+            }
+            .recoverypregunta{
+                width: 100%;
+                height: 100%;
+                background-color: ;
+            }
+            .recoverypregunta{
+             display: grid;
+            grid-template-columns: 1fr;    
+            grid-template-rows: repeat(3,1fr);
+            grid-gap: 10px;
+            justify-items:center;
+                
+                
+            }
+            .recprespuesta::placeholder{
+                opacity: 1;
+                transition: all 0.5s ease;
+                text-decoration: underline;
+                color: dodgerblue;
+                font-weight: bold;
+            }
+            .recprespuesta:focus::placeholder{
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+            .recpregunta,.recprespuesta{
+                height: 100%;
+                width: 95%;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                padding-left: 15px;
+                background-color: rgba(0,0,0,0.1);
+                    
+            }
+            .botonvalidarpregunta{
+                    border: none;
+                outline: none;
+                padding: 5px;
+                height: 90%;
+                width: 35%;
+                margin-left: 5px;
+                text-align: center;
+                border-radius: 20px;
+                color: white;
+                background-color: #1a73e8;
+                cursor: pointer;
+            }
+      
+            .recoveryrespuesta{
+                display: grid;
+                grid-gap: 5px;
+                grid-template-columns: minmax(150px,auto) 1fr;
+                grid-template-rows: repeat(4,1fr);
+                    
+                
+            }
+            .recoveryrespuesta label{
+                line-height: 25px;
+                font-family: Arial;
+                font-size: 13px;
+                color: darkslategrey;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .inputrenew{
+                   height: 100%;
+                   /* width: 95%; */
+                   background-color:;
+                   border: none;
+                   outline: none;
+                   border-radius: 5px;
+                   padding-left: 15px;
+                   background-color: rgba(0,0,0,0.1);
+            }
+            .botonGC{
+                grid-column: span 2;
+                display: flex;
+                background-color: ;
+            }
+            .guardarcambios{
+                height: 100%;
+                width: 40%;
+                color:white;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+            
+                  border: none;
+                outline: none;
+                padding: 5px;
+                
+                
+                
+                text-align: center;
+                border-radius: 20px;
+                
+                background-color: #1a73e8;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            
+            /*
+            <div class="recoveryrespuesta" id="recoveryrespuesta">
+        
+        <label for="">Antigua contraseña : </label><input type="password">
+        <label for="">Nueva Contraseña : </label><input type="password">
+        <label for="">Repite Contraseña : </label><input type="password">
+        <input type="button" value="Guardar Cambios">
+        
+        
+      
+</div>
+            */
+           .contenedorLog,.contenedorRegister,.contenedorRecovery{
+                width: 100%;
+                height: 100%;                
+            }
+             
+            .contenedorLog2 div:nth-child(1){
+                background-color: ;
+            }
+            .contenedorLog2 div:nth-child(2){
+                background-color: ;
+            }
+            .contenedorLog2 div:nth-child(3){
+                background-color: ;
+            }
+             .contenedorLog2 div:nth-child(4){
+                background-color: ;
+            }
+             .contenedorLog2 div:nth-child(5){
+                background-color: ;
+            display: flex;
+                 justify-content: center;
+                 align-items: center;
+            position: relative;
+            }
+            .contenedorLog2 div:nth-child(5)::before{
+            content: "";
+            width: 42%;
+    height: 0.96px;    
+    top: 5px;
+    left: 19px;
+    position: absolute;
+    background-color: darkgray;
+    box-shadow: 180px  0px 0px 
+        
+        darkgray;
+                filter: blur(1px);
+            }        
+           .LogTitle a{
+	text-decoration: none;
+	
+	display:flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Baloo Da', cursive;
+	font-size:35px;
+	color:black;
+    filter: blur(0.6px);
+	padding-left: 8px; 
+    
+font-family: 'Pacifico', cursive;
+}
+.LogTitle a span{
+	background: linear-gradient(#FF2233,orange);
+  -webkit-background-clip: text;
+  color:transparent;
+ 
+/*    
+	text-shadow:inset 2px 2px 10px 5px  rgba(245,231,56,0.6);
+background-image:linear-gradient(25deg,orange,pink);	
+	*/
+	
+
+}
+            .LogUser{
+                position: relative;
+                height: 100%;
+                
+            }
+            .LogPassword{
+                height: 100%;
+                position: relative;
+                display: flex;
+            }
+            /*
+             <input type="text" placeholder="Contraseña" id="passw"><div class="mostrarUquitarpass">
+         <span class="mostrarpass">Mostrar</span>
+            */
+            #passw{
+                padding-right: 90px;
+                
+            }
+            
+            .mostrarpass{
+            background-color:#1a73e8;
+                height: 100%;
+                width: 100%;
+                 border-radius:0px 5px 5px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+            .taparpass{
+                   background-color:crimson;
+                height: 100%;
+                width: 100%;
+                color: white;
+                 border-radius:0px 5px 5px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+            .mostrarUquitarpass{
+                position: absolute;
+                right: 19px;
+                width: 85px;
+                height: 100%;
+                
+                border-radius:0px 5px 5px 0px;
+            
+                color: white;
+                font-size: 17px;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            
+            .mostrarUquitarPassAnimacion{
+                visibility: visible;
+            }
+            .LogUser input,.LogPassword input{
+                display: flex;
+                width: 90%;
+                height: 100%;
+                padding: 1px 15px;
+                font-size: 13px;
+                font-weight: 200;
+                
+                background-color: #f8f9fa;
+                margin: auto;
+                border: 0.56px solid rgba(0,0,0,0.1);
+                border-radius: 5px;
+                outline: none;
+                font-family: sans-serif;
+            }
+            .LogUser input:focus,.LogPassword input:focus{
+            
+        border: 0.56px solid rgba(0,0,0,0.4);
+                
+                
+            }
+            .LogUser input::placeholder,.repiten::placeholder{
+                opacity: 1;
+                color: lightslategray;
+                transition: all 0.5s ease;
+            }
+            .LogPassword input::placeholder{
+                opacity: 1;
+                color: lightslategray;
+                transition: all 0.5s ease;
+            }
+            .LogPassword input:focus::placeholder,.repiten:focus::placeholder{
+                opacity: 0;
+                transition:all 0.5s ease; 
+            }
+            .LogUser input:focus::placeholder{
+                opacity: 0;
+                transition: all 0.5s ease;
+                
+            }
+            .logButtonSession{
+                height: 100%;
+                display: flex;
+                align-items: center;
+    
+            }
+            .logButtonSession input{
+                outline: none;
+                border: none;
+                display: flex;
+                margin: auto;
+                padding: 10px;
+                width: 90%;
+                justify-content: center;
+                align-items: center;
+            cursor: pointer;
+                background-color: #1a73e8;
+            /*#1a73e8*/    
+                color: white;
+            } 
+            .logRecuperar a{
+    text-decoration: none;
+            color:#1a73e8; 
+                position: relative;
+font-size: 16px;
+   font-family: 'Quicksand', sans-serif;
+                font-size: 14.5px;
+            }            
+    .logRegistrate{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom:20px;
+       font-family: 'Quicksand', sans-serif;
+        font-size: 14px;
+            }
+            .logRegistrate span{
+            /*color: #3897f0;
+              */
+        color:#1a73e8;        
+                margin-left: 5px;
+                font-weight: 550;
+           
+                cursor: pointer;
+            }
+            
+             
+            .contenedorSecundario{
+                
+                   // background-color:#1a73e8;
+            background-image:linear-gradient(45deg,crimson,orange);
+            }
+            .contenedorSecundario p:nth-child(1){
+                text-align: center;
+                font-size: 19px;
+                line-height: 25px;
+                font-family: 'Baloo Da', cursive;
+                color: white;
+                filter: brightness(130%);
+            }
+            .contenedorSecundario p:nth-child(2){
+                font-size: 19px;
+                display: flex;
+                margin-top: 15px;
+                justify-content: center;
+                font-family: 'Quicksand', sans-serif;
+                color: white;
+                filter: brightness(130%);
+            }
+            .contenedorSecundario p:nth-child(2) a{
+                text-decoration: ;
+                color: antiquewhite;
+                font-weight: bold;
+                margin-left: 9px;
+                
+                
+            }
+            .contenedorSecundario p:nth-child(3){
+                color: blue;
+                text-align: center;
+                margin-top: 5px;
+                font-size: 19px;
+                font-family: 'Baloo Da', cursive;
+                filter: brightness(130%);
+            }
+            .contenedorSecundario span{
+                font-size: 20px;
+             color:white;
+                display: inline-flex;
+                flex-wrap: wrap;
+                text-decoration: underline;
+                margin: 5px;
+             cursor: pointer;
+            }
+            .cuadropopup::after{
+              
+            }
+            .cuadropopup{
+                width: 350px;
+                height: 350px;
+                position:absolute;
+            // background-color:#1a73e8;
+            background-image:linear-gradient(45deg,white,white);
+                border: 2px solid rgba(0,0,0,0.1);
+                box-shadow: 2px 2px 4px 5px rgba(0,0,0,0.2);
+                border-radius: 10px;
+                z-index: 1000;
+                margin: auto;
+                transform: translateY(-100vh);
+                transition: all 0.6s;
+            }
+            .moverabajopopup{
+                transform: translateY(0vh);
+                transition: all 0.6s;
+            }
+            .cuadropopup i{
+                font-size: 40px;
+                right: 5px;
+                position: absolute;
+             color: red; 
+                cursor: pointer;
+            }
+            .cuadropopup p{
+                overflow-y: auto;
+                overflow-x: hidden;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-top: 70px;
+                width: 98%;
+                height: 70%;
+            }
+            
+               .cuadropopup p::-webkit-scrollbar {
+    width: 9px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+   
+}      
+    .cuadropopup p::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(25deg,crimson,white);
+    border-radius: 10px;
+    width: 15px;
+            } 
+    
+            
+/*
+            <input type="password" class="inputrenew">
+        <div class="verificacionkey">
+        <i class="fas fa-check okey"></i>
+        </div>
+        
+        <label for="">Repite Contraseña : </label>
+        <input type="password" class="inputrenew">
+           <div class="verificacioncancel">
+       <i class="fas fa-times cancela"></i>
+        </div>    
+            
+            */    
+            .recoveryrespuesta .repiten,.recoveryrespuesta .nueva{
+                color:blue;
+                padding-right: 60px;
+                position: relative;
+                
+            } 
+            .verificacioncancel{
+                right: 13px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                top: 0;
+                position: absolute;
+                height: 100%;
+                
+                width: 50px;
+                background-color: ;
+                display: flex;
+                visibility: hidden;
+            }
+            .verificacionkey{
+                right: 13px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                top: 0;
+                position: absolute;
+                height: 100%;
+                
+                width: 50px;
+                background-color: ;
+                display: flex;
+                visibility: hidden;
+            }
+            
+            .mostrarchecknuevo{
+                visibility: visible;
+            }
+           
+            .mostrarequisrepite{
+                visibility: visible;
+            }
+                
+            
+            .okey{
+                margin: auto;
+                font-size: 18;
+                font-weight: bold;
+                color: limegreen;
+            }
+              .cancela{
+                margin: auto;
+                  font-size: 18;
+                font-weight: bold;
+                  color:red;
+            }
+           
+            .cajapass{
+                position: relative;
+                height: 100%;
+            }
+            #msjcuenta{
+                display: flex;
+                text-align: center;
+                width: 100%;
+                
+                color :royalblue;
+                justify-content: center;
+                
+                
+            }
+            #msjcuentaerror{
+                    display: flex;
+                text-align: center;
+                width: 100%;
+                
+                color :crimson;
+                justify-content: center;
+                        
+            }
+            .registerusuario{
+                position:relative;
+
+            }  
+            #regusuario{
+               padding-right:120px;
+                text-transform:lowercase;
+            }
+            .validarUserCreate{
+                
+                position:absolute;
+                top:2px;
+                height:90%;
+                right:40px;
+
+            }
+            .OkeyUserCreate{
+                font-size:12px;
+                color:white;
+                 width:108px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background-color:royalblue;
+                 border-top-right-radius:5px;
+                border-bottom-right-radius:5px;
+            }
+            .RepeatUserCreate{
+                   font-size:12px;
+                color:white;
+                 width:108px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background-color:red;
+                 border-top-right-radius:5px;
+                border-bottom-right-radius:5px;
+            }
+
+   @media 
+(-webkit-min-device-pixel-ratio: 1.5), 
+(min-resolution: 144dpi)
+and (device-width: 1920px)
+and (orientation: landscape) {
+  body{
+   
+        
+        
+    }
+.contenedorLogCentral{
+    width:100vw;
+}
+   .contenedorLog2 div:nth-child(5)::before{
+            content: "";
+            width: 40%;
+    height: 0.96px;    
+    top: 5px;
+    left: 15px;
+    position: absolute;
+    background-color: darkgray;
+    box-shadow: 173px  0px 0px 
+        
+        darkgray;
+                filter: blur(1px);
+            }      
+}

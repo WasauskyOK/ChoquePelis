@@ -1,0 +1,223 @@
+.cuerpobaner{
+                width: 95%;
+                height: 100%;
+                margin: auto;
+                height: calc(100vh - 20vh);
+                
+                overflow: hidden;
+                
+            }
+            .contenedorBaner{
+               width: 400%;
+                
+                height: 100%;
+                display: flex;
+                
+                animation: animacionBanersito 15s infinite;
+                animation-timing-function: ease-in-out;
+                animation-direction: alternate;
+                
+                overflow: hidden;
+            }
+            
+            .cajaBaner{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                
+            }
+            .imagenBaner{
+                
+                background-size:cover;
+                
+                background-repeat: no-repeat;
+                /*
+                background-attachment: fixed;
+                */
+                height: 100%;
+                width: 100%;
+               position: absolute;
+                z-index: 10;
+            }
+            
+            @keyframes animacionBanersito{
+                0%{
+                   margin-left: 0%;  
+                }
+                
+                20%{
+                    margin-left:0%;
+                }
+                25%{
+                   
+                    margin-left: -100%; 
+                }
+                45%{
+                    
+                    margin-left:-100%;
+                    
+                }
+                50%{
+                     margin-left:-200%;
+                }
+                70%{
+                    margin-left:-200%;  
+                }
+                75%{
+                     margin-left:-300%;   
+                }
+                
+                100%{
+                      margin-left:-300%;   
+                }
+            }
+          
+            .ContenedorContenidoBaner{
+                width: 100%;
+                height: 100%;
+            
+                position: absolute;
+                z-index: 20;
+               
+                display: grid;
+                grid-template-columns: minmax(100px,1fr) 4fr;
+                grid-template-rows: 1fr;
+                
+            }
+            .subimagenBaner{
+            
+                display: flex;
+             
+                
+            }
+            .subimagenBanerCaja{
+                width:auto;
+                height: auto;
+                margin: auto;
+                position: relative;
+                
+                display: flex;
+        
+             box-shadow: 70px 10px 300px 93px black ,100px 40px 330px 123px rgba(0,0,0,0.6) 
+                 ;
+            background-color: black;
+            }
+             .cajaBaner::before{
+                content: "";
+                position: absolute;
+                width: 400px;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-image:linear-gradient(to left,black,gray);
+                opacity: 0.2;
+                z-index: 10;   
+            }
+            .subimagenBanerCajaImage{
+                max-width:100%;
+                max-height:100%;
+               width: 220px;
+                height: 350px;
+                margin: auto;
+                object-fit: cover;
+                filter: brightness(120%);
+               border-radius: 10px; animation:scalaimagenSubBaner 1.5s infinite alternate ease;
+            }
+            
+            .ContenedorDescripcion{
+               
+                display: flex;
+                
+                align-items: flex-end;
+              
+                grid-column:  2/-1;
+               
+            
+            }
+            .contenidoDescrip{
+                
+               
+                width: 60%;
+                height: auto;
+                position: relative;
+                left: 5rem;
+                bottom: 3rem;
+                display: flex;
+                flex-direction: column;
+                line-height: 26px;
+            }
+            .contenidoDescrip p:nth-child(1){
+                color: white;
+                font-size: 30px;
+                text-align: justify;
+                word-wrap: break-word;
+              font-family: 'Josefin Sans', sans-serif;
+                font-weight: bold;
+            }
+             .contenidoDescrip p:nth-child(2){
+                 color: white;
+                font-size: 16px;
+                text-align: justify;
+                word-wrap: break-word;
+            font-family: 'Quicksand', sans-serif;
+            }
+            .botonesBaner{
+             display: flex;
+                
+            }
+            .botonesBaner a{
+                display: inline-block;
+                padding: 10px 25px;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                font-family: 'Baloo Da', cursive;
+                background-color: #1a73e8;
+                margin-left: 5px;
+                border-radius: 5px;
+                transition:  all 0.5s;
+            }
+            .botonesBaner a:hover{
+                color: #1a73e8;
+                background-color: white;
+                font-size: 18px;
+            }
+            .botonesBaner i{
+                margin-right: 8px;
+            }
+ 	   
+ 	@keyframes scalaimagenSubBaner{
+ 		to{
+ 			transform:scale(1);
+ 			
+ 		}
+ 		from{
+ 			transform:scale(1.05);
+ 				
+ 		}
+ 		
+ 		
+ 		
+ 		
+ 		
+ 	}
+              @media(max-width:800px ){
+                .cuerpobaner{
+                   height: calc(100vh - 50vh);
+                }
+                .subimagenBaner{
+                           
+                    display: none;
+                }
+                  .contenidoDescrip p:nth-child(2){
+                      display: none;
+                  }
+                  .contenidoDescrip{
+                      left: 10px;
+                      bottom: 10px;
+                  }
+                  .ContenedorDescripcion{
+                    grid-column:  1/-1;  
+                  }  
+               
+            }
